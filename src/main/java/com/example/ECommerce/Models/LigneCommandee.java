@@ -27,6 +27,13 @@ public class LigneCommandee {
     @JoinColumn(name = "produit_id") // Colonne de jointure vers la table Produit
     private Produit produit;
 
+
+
+    public void setProduit(Produit produit) {
+        this.produit = produit;
+    }
+
+
     // Constructeurs
 
     public Long getId() {

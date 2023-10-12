@@ -7,7 +7,7 @@ import com.example.ECommerce.Models.Produit;
 import java.util.List;
 
 public interface CommandeService {
-    Commande passerCommande(Client client, List<Long> produitIds);
+    Commande passerCommande(Client client, List<Long> produitIds, List<Integer> quantiteCommandeeParProduit);
     // Ajoutez d'autres méthodes de service si nécessaire
 }
 

@@ -24,13 +24,15 @@ public class CommandeController {
     @PostMapping("/passer-commande")
     public Commande passerCommande(
             @RequestParam Long clientId,
-            @RequestParam List<Long> produitIds
+            @RequestParam List<Long> produitIds,
+            @RequestParam List<Integer> quantiteCommandeeParProduit
     ) {
         // Utilisez le service client pour rechercher le client par ID
         Client client = clientService.getClientById(clientId);
 
-        return commandeService.passerCommande(client, produitIds);
+        return commandeService.passerCommande(client, produitIds, quantiteCommandeeParProduit);
     }
+
 
 
 }
